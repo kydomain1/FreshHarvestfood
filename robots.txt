@@ -1,0 +1,15 @@
+# Robots.txt for FreshHarvestfood
+# https://yoursite.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow search and utility pages from indexing
+Disallow: /search.html
+
+# Sitemap location
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Crawl-delay (optional, adjust if needed)
+# Crawl-delay: 1
+

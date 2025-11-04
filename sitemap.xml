@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage -->
+    <url>
+        <loc>https://yoursite.com/</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- About Page -->
+    <url>
+        <loc>https://yoursite.com/about.html</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Contact Page -->
+    <url>
+        <loc>https://yoursite.com/contact.html</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://yoursite.com/privacy.html</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Search Page -->
+    <url>
+        <loc>https://yoursite.com/search.html</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Article 1: Summer Fashion Trends 2025 -->
+    <url>
+        <loc>https://yoursite.com/article1.html</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Article 2: Natural Skincare Routines -->
+    <url>
+        <loc>https://yoursite.com/article2.html</loc>
+        <lastmod>2025-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Article 3: Indoor Garden Guide -->
+    <url>
+        <loc>https://yoursite.com/article3.html</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Article 4: Boutique Hotels -->
+    <url>
+        <loc>https://yoursite.com/article4.html</loc>
+        <lastmod>2025-05-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Article 5: Superfood Smoothie Bowls -->
+    <url>
+        <loc>https://yoursite.com/article5.html</loc>
+        <lastmod>2025-08-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+</urlset>
+

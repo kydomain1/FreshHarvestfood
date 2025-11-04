@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - FreshHarvestfood</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Search FreshHarvestfood for articles on fashion, beauty, home & garden, travel, finance, and food. Find the perfect content for your lifestyle needs.">
+    <meta name="keywords" content="search, find articles, lifestyle search, blog search">
+    <meta name="author" content="FreshHarvestfood">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="23" fill="#E8B4B8"/>
+                    <path d="M25 10 C18 10, 15 15, 15 20 C15 28, 25 35, 25 40 C25 35, 35 28, 35 20 C35 15, 32 10, 25 10Z" fill="#B8A8A0"/>
+                    <circle cx="22" cy="19" r="2" fill="#D4A5A5"/>
+                    <circle cx="28" cy="19" r="2" fill="#D4A5A5"/>
+                    <path d="M20 25 Q25 28, 30 25" stroke="#B8A8A0" stroke-width="2" stroke-linecap="round" fill="none"/>
+                </svg>
+                <span class="logo-text">FreshHarvestfood</span>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Search Results</h1>
+            <p class="hero-subtitle" id="searchQuery">Searching for articles...</p>
+        </div>
+    </section>
+
+    <section class="search-page-section">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="search-bar-large">
+                <input type="text" id="searchInput" class="search-input-large" placeholder="Search articles, topics, products...">
+                <button class="search-btn-large" id="searchButton">
+                    <svg width="24" height="24" viewBox="0 0 20 20" fill="none">
+                        <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14 14L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Search
+                </button>
+            </div>
+
+            <!-- Filter Options -->
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label>Filter by Category:</label>
+                    <div class="categories-search">
+                        <button class="category-btn active" data-category="all">All Categories</button>
+                        <button class="category-btn" data-category="fashion">Fashion & Accessories</button>
+                        <button class="category-btn" data-category="beauty">Health & Beauty</button>
+                        <button class="category-btn" data-category="home">Home & Garden</button>
+                        <button class="category-btn" data-category="travel">Travel & Accommodation</button>
+                        <button class="category-btn" data-category="finance">Finance & Insurance</button>
+                        <button class="category-btn" data-category="food">Food & Beverage</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="relevance">Relevance</option>
+                        <option value="date-desc">Newest First</option>
+                        <option value="date-asc">Oldest First</option>
+                        <option value="title">Title (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Search Results Info -->
+            <div class="search-info">
+                <p id="resultsCount">Loading results...</p>
+            </div>
+
+            <!-- Search Results Grid -->
+            <div id="searchResults" class="articles-grid">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <svg class="no-results-icon" width="120" height="120" viewBox="0 0 120 120" fill="none">
+                    <circle cx="60" cy="60" r="50" fill="#FAF8F6"/>
+                    <circle cx="60" cy="60" r="40" stroke="#E8B4B8" stroke-width="3"/>
+                    <path d="M45 50 Q60 65 75 50" stroke="#E8B4B8" stroke-width="3" stroke-linecap="round" fill="none"/>
+                    <circle cx="48" cy="45" r="3" fill="#E8B4B8"/>
+                    <circle cx="72" cy="45" r="3" fill="#E8B4B8"/>
+                </svg>
+                <h2>No Results Found</h2>
+                <p>We couldn't find any articles matching your search.</p>
+                <p class="no-results-suggestions">Try:</p>
+                <ul>
+                    <li>Using different keywords</li>
+                    <li>Checking your spelling</li>
+                    <li>Using more general terms</li>
+                    <li>Browsing our categories instead</li>
+                </ul>
+                <a href="index.html" class="btn-back-home">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FreshHarvestfood</h3>
+                    <p>Your trusted source for lifestyle inspiration and expert recommendations.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/freshharvestfood" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/freshharvestfood" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.pinterest.com/freshharvestfood" class="social-icon" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/freshharvestfood" class="social-icon" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FreshHarvestfood. All rights reserved. | <a href="privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/search-page.js"></script>
+
+    <style>
+        .search-page-section {
+            padding: var(--spacing-xxl) 0;
+            min-height: 60vh;
+        }
+
+        .search-bar-large {
+            max-width: 800px;
+            margin: 0 auto var(--spacing-xl);
+            display: flex;
+            background: var(--white);
+            border-radius: var(--radius-full);
+            padding: var(--spacing-xs);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-smooth);
+        }
+
+        .search-bar-large:focus-within {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .search-input-large {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: var(--spacing-md) var(--spacing-lg);
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            outline: none;
+        }
+
+        .search-btn-large {
+            background: var(--primary-pink);
+            border: none;
+            padding: var(--spacing-md) var(--spacing-xl);
+            border-radius: var(--radius-full);
+            color: var(--white);
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .search-btn-large:hover {
+            background: var(--dusty-rose);
+            transform: scale(1.05);
+        }
+
+        .search-filters {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .filter-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .filter-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .filter-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .categories-search {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        .sort-select {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 2px solid var(--light-bg);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            color: var(--text-dark);
+            background: var(--white);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .sort-select:focus {
+            outline: none;
+            border-color: var(--primary-pink);
+        }
+
+        .search-info {
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-md);
+            background: var(--light-bg);
+            border-radius: var(--radius-sm);
+            text-align: center;
+        }
+
+        .search-info p {
+            margin: 0;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: var(--spacing-xxl);
+            background: var(--white);
+            border-radius: var(--radius-md);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .no-results-icon {
+            margin-bottom: var(--spacing-lg);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .no-results h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .no-results p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .no-results-suggestions {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: var(--spacing-lg);
+        }
+
+        .no-results ul {
+            list-style: none;
+            padding: 0;
+            margin: var(--spacing-md) 0;
+        }
+
+        .no-results li {
+            color: var(--text-light);
+            padding: var(--spacing-xs) 0;
+        }
+
+        .no-results li::before {
+            content: "•";
+            color: var(--primary-pink);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+        }
+
+        .btn-back-home {
+            display: inline-block;
+            margin-top: var(--spacing-lg);
+            padding: var(--spacing-md) var(--spacing-xl);
+            background: var(--primary-pink);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            transition: var(--transition-bounce);
+        }
+
+        .btn-back-home:hover {
+            background: var(--dusty-rose);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        @media (max-width: 768px) {
+            .search-btn-large {
+                padding: var(--spacing-md);
+            }
+
+            .search-btn-large span {
+                display: none;
+            }
+
+            .categories-search {
+                justify-content: flex-start;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: var(--spacing-sm);
+            }
+
+            .category-btn {
+                white-space: nowrap;
+            }
+        }
+    </style>
+</body>
+</html>
+
