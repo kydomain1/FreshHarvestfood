@@ -69,6 +69,17 @@ const articles = [
         dateFormatted: "August 12, 2025",
         image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=500&fit=crop",
         url: "article5.html"
+    },
+    {
+        id: 6,
+        title: "Old Navy CA: Making Family Fashion Fun",
+        excerpt: "Discover how Old Navy Canada is revolutionizing family fashion with affordable, stylish pieces that bring joy to every wardrobe—from tiny tots to trendy adults.",
+        category: "fashion",
+        categoryName: "Fashion & Accessories",
+        date: "2025-08-25",
+        dateFormatted: "August 25, 2025",
+        image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=800&h=500&fit=crop",
+        url: "article6.html"
     }
 ];
 
