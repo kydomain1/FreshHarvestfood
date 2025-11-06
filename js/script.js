@@ -103,19 +103,21 @@ document.querySelectorAll('.article-card').forEach(card => {
 
 // Header scroll effect
 let lastScroll = 0;
-const header = document.querySelector('.header');
+const header = document.querySelector('header');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        header.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.06)';
-    }
-    
-    lastScroll = currentScroll;
-});
+if (header) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+            header.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.1)';
+        } else {
+            header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.06)';
+        }
+        
+        lastScroll = currentScroll;
+    });
+}
 
 // Form submission handling (for contact page)
 const contactForm = document.getElementById('contactForm');
